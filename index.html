@@ -73,9 +73,50 @@
 		<h1>I <em>actually</em> need a map, yes</h1>
 		<a class="source" href="https://gramener.github.io/visual-vocabulary-vega/#/Spatial/"></a>
 	</header>
+</section>
 
-	
+<section>
+	<header class="slide">
+		<h1>Basic Map Types</h1>
+		<p class="presenter-notes"></p>
+	</header>
+	<article class="slide terminology">
+		<header><h1>Choropleth</h1></header>
+		<div id="observablehq-cc0d7a5a"></div>
+		<script type="module">
+			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import define from "https://api.observablehq.com/@d3/choropleth.js?v=3";
+			const inspect = Inspector.into("#observablehq-cc0d7a5a");
+			(new Runtime).module(define, name => (name === "chart") && inspect());
+		</script>
+		<a class="source" href="https://observablehq.com/@d3/choropleth?collection=@d3/d3-geo"></a>
+		<p class="presenter-notes">Should always be rates rather than totals and use a sensible base geography.</p>
+	</article>
 
+	<article class="slide terminology">
+		<header><h1>Symbol</h1></header>
+		<div id="observablehq-6c9132f6"></div>
+		<script type="module">
+			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import define from "https://api.observablehq.com/@d3/bubble-map.js?v=3";
+			const inspect = Inspector.into("#observablehq-6c9132f6");
+			(new Runtime).module(define, name => (name === "chart") && inspect());
+		</script>
+		<a class="source" href="https://observablehq.com/@d3/bubble-map?collection=@observablehq/maps"></a>
+		<p class="presenter-notes">Use for totals rather than rates - but small differences in data will be hard to see.</p>
+	</article>
+
+	<article class="slide terminology">
+		<header><h1>Heatmap</h1></header>
+		<p>
+		<img src="img/heatmap-example.png" />
+		</p>
+		<a class="source" href="https://observablehq.com/@tmcw/leaflet"></a>
+		<p class="presenter-notes">Grid-based data values mapped with an intensity colour scale. As choropleth map - but not snapped to an admin/political unit</p>
+	</article>
+</section>
+
+<section>
 	<article class="slide type-table type-simple-input">
 		<header><h1>Easiest to start - we have the data!</h1></header>
 		<table>
@@ -109,7 +150,53 @@
 			</tbody>
 		</table>
 	</article>
+	<header class="slide">
+		<h1>We have the data!</h1>
+		<p class="presenter-notes"></p>
+	</header>
 
+	<article class="slide">
+		<header><h1>Where did the data come from?</h1></header>
+		<ul>
+			<li class="delayed">A web portal!</li>
+		</ul>
+	</article>
+
+	<article class="slide terminology">
+		<header><h1>Web Portals</h1></header>
+		<p>hb </p>
+	</article>
+
+	<article class="slide terminology">
+		<header><h1>Metadata</h1></header>
+		<p>hb </p>
+	</article>
+
+	<article class="slide">
+		<header><h1>Where did the data come from?</h1></header>
+		<ul>
+			<li>A web portal!</li>
+			<li class="delayed">Another place</li>
+		</ul>
+	</article>
+
+	<article class="slide terminology">
+		<header><h1>Data dictionary</h1></header>
+		<p>hb </p>
+	</article>
+
+	<article class="slide">
+		<header><h1>Where did the data come from?</h1></header>
+		<ul>
+			<li>A web portal!</li>
+			<li>Another place</li>
+			<li class="delayed">A nice person gave it to us?</li>
+		</ul>
+		<p class="presenter-notes">Same rules apply. Essentially read the documentation.</p>
+	</article>
+</section>
+
+<section>
 	<article class="slide type-table type-simple-output">
 		<header><h1>Easiest to end - we just want a picture.</h1></header>
 		<table>
@@ -143,7 +230,64 @@
 			</tbody>
 		</table>
 	</article>
+	<header class="slide">
+		<h1>We need a simple graphic.</h1>
+		<p class="presenter-notes">It's going to be static, I'll probably never update it again, etc. I might even print it! But there are some important things you need to keep in mind.</p>
+	</header>
 
+	<article class="slide">
+		<header><h1>Visual Variables</h1></header>
+		<p><img src="https://www.axismaps.com/media/posts/2018/09/visual_variables.png" /></p>
+		<a class="source" href="https://www.axismaps.com/media/posts/2018/09/visual_variables.png"></a>
+	</article>
+
+	<article class="slide terminology">
+		<header><h1>Projections</h1></header>
+		<p><div id="observablehq-0d2cdc9f" style="margin: 0 auto; width: 100%; max-width: 100%; overflow-y: hidden; "></div></p>
+		<script type="module">
+			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import define from "https://api.observablehq.com/@d3/projection-comparison.js?v=3";
+			const inspect = Inspector.into("#observablehq-0d2cdc9f");
+			(new Runtime).module(define, name => (name === "map") && inspect());
+		</script>
+		<a class="source" href="https://observablehq.com/@d3/projection-comparison?collection=@d3/d3-geo"></a>
+	</article>
+
+
+	<article class="slide terminology">
+		<header><h1>Scales</h1></header>
+		<p><img src="img/quantile-quantize-and-threshold-scales.png" /></p>
+		<a class="source" href="https://observablehq.com/@d3/quantile-quantize-and-threshold-scales"></a>
+		<p class="presenter-notes">
+			Quantiles are defined, in statistics, as separating a population into intervals of similar sizes (the 10% poorest, the 50% tallest, the 1% richest…); a quantile scale is essentially defined by its domain, a fixed set of values — when applied to a new value, it will then compute its ranking with respect to the initial distribution, and map that ranking to the output range.
+
+			To Quantize means to group values with discrete increments — like expressing a list of floating point numbers with 1 decimal digit, or rounding time to the closest minute. It is the output range that is discretized, and such a scale allows to transform an initial continuous range into a discrete set of classes.
+
+			Threshold scales will allow us to directly specify the cut values that separate the classes.
+		</p>
+	</article>
+
+	<article class="slide terminology">
+		<header><h1>Sequential color scales</h1></header>
+		<p><img src="img/colors-sequential.png" /></p>
+		<a class="source" href="http://colorbrewer2.org/#type=sequential&scheme=Purples&n=5"></a>
+	</article>
+
+	<article class="slide terminology">
+		<header><h1>Diverging color scales</h1></header>
+		<p><img src="img/colors-diverging.png" /></p>
+		<a class="source" href="http://colorbrewer2.org/#type=diverging&scheme=RdBu&n=5"></a>
+	</article>
+
+	<article class="slide terminology">
+		<header><h1>Qualitative color scales</h1></header>
+		<p><img src="img/colors-qualitative.png" /></p>
+		<a class="source" href="http://colorbrewer2.org/#type=qualitative&scheme=Accent&n=5"></a>
+	</article>
+
+</section>
+
+<section>
 	<article class="slide type-table type-common">
 		<header><h1>Most maps we want</h1></header>
 		<table>
@@ -173,81 +317,13 @@
 			</tbody>
 		</table>
 	</article>
-
-	<!-- 
-
-	<article class="slide" id="navigation">
-		<h1>Keyboard Navigation</h1>
-		<ul>
-			<li><kbd>→</kbd> or <kbd>↓</kbd> to advance to the next slide or incrementally displayed item</li>
-			<li><kbd>←</kbd> or <kbd>↑</kbd> to go to the previous slide or incrementally displayed item</li>
-			<li><kbd>Ctrl</kbd><kbd>→</kbd> or <kbd>Ctrl</kbd><kbd>↓</kbd> to jump to the next slide</li>
-			<li><kbd>Ctrl</kbd><kbd>←</kbd> or <kbd>Ctrl</kbd><kbd>↑</kbd> to jump to the previous slide</li>
-			<li>Home to go to the first slide, End to go to the last</li>
-			<li><kbd>Ctrl</kbd><kbd>G</kbd> to jump to an arbitrary slide (by slide number or identifier)</li>
-		</ul>
-	</article> -->
-</section>
-
-<section>
 	<header class="slide">
-		<h1>But I'm a programmer!</h1>
+		<h1>There're <em>a lot</em> of libraries for that</h1>
+		<p class="presenter-notes">Data that we may have to process on a map that we may want our audience to interact with? We're going to get pretty programmy now.</p>
 	</header>
 
-	<article data-insert="type-table" class="slide cell a1">
-		<div>Overlay</div>
-	</article>
-
 	<article class="slide">
-		<header><h1>Projections</h1></header>
-
-		<div id="observablehq-0d2cdc9f"></div>
-		<script type="module">
-			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-			import define from "https://api.observablehq.com/@d3/projection-comparison.js?v=3";
-			const inspect = Inspector.into("#observablehq-0d2cdc9f");
-			(new Runtime).module(define, name => (name === "map") && inspect());
-		</script>
-
-		<a class="source" href="https://observablehq.com/@d3/projection-comparison?collection=@d3/d3-geo"></a>
-	</article>
-
-	<article class="slide">
-		<header>
-			<h1>Choropleth</h1>
-		</header>
-	
-		<div id="observablehq-cc0d7a5a"></div>
-		<script type="module">
-			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-			import define from "https://api.observablehq.com/@d3/choropleth.js?v=3";
-			const inspect = Inspector.into("#observablehq-cc0d7a5a");
-			(new Runtime).module(define, name => (name === "chart") && inspect());
-		</script>
-	
-		<a class="source" href="https://observablehq.com/@d3/choropleth?collection=@d3/d3-geo"></a>
-	</article>
-
-	<article class="slide">
-		<header>
-			<h1>Bubble</h1>
-		</header>
-	
-		<div id="observablehq-6c9132f6"></div>
-		<script type="module">
-			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-			import define from "https://api.observablehq.com/@d3/bubble-map.js?v=3";
-			const inspect = Inspector.into("#observablehq-6c9132f6");
-			(new Runtime).module(define, name => (name === "chart") && inspect());
-		</script>
-	
-		<a class="source" href="https://observablehq.com/@d3/bubble-map?collection=@observablehq/maps"></a>
-	</article>
-
-	<article class="slide">
-		<header>
-			<h1>Pop. Change, 2017-2018 (Census)</h1>
-		</header>
+		<header><h1>Census Data!</h1></header>
 	
 		<div id="observablehq-ba083525"></div>
 		<script type="module">
@@ -259,140 +335,22 @@
 	
 		<a class="source" href="https://observablehq.com/@mbostock/population-change-2017-2018"></a>
 	</article>
-
-	<!--
-	<article class="slide">
-		<h1>Incremental display</h1>
-
-		<ul class="delayed-children">
-			<li>Incremental display of slide contents (just add <code>class="delayed"</code>)</li>
-			<li>Use selector <code>.delayed:not(.current):not(.displayed)</code> to change the style of undisplayed items</li>
-			<li>Use selector <code>.delayed.displayed</code> to change the style of displayed items</li>
-			<li>Use selector <code>.delayed.current</code> to change the style of current items</li>
-			<li>Use <code>class="delayed-children"</code> to apply the <code>delayed</code> class to all of an element’s children</li>
-			<li>
-				Nested delayed items <strong class="delayed">are possible</strong>!
-			</li>
-		</ul>
-	</article> -->
-</section>
-
-<!-- <section>
-	<header class="slide">
-		<h1>But I hate GUIs</h1>
-	</header>
-
-	<article class="slide" id="overview">
-		<h1>Overview</h1>
-
-		<ul>
-			<li>Loaded automatically, use <code>&lt;code class="no-overview"></code> to prevent this.</li>
-			<li>Press <kbd>Ctrl</kbd>+<kbd>H</kbd> (or <kbd>Shift</kbd>+<kbd>H</kbd>) to trigger, <kbd>Esc</kbd> to close.</li>
-			<li class="delayed">Cool, huh? You can press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>H</kbd> to see all slides</li>
-		</ul>
-	</article>
-
-	<article class="slide">
-		<h1>Syntax highlighting with PrismJS</h1>
-
-		<ul>
-			<li>Autoloads core & languages used</li>
-			<li>Load plugins by listing their ids in a <code>data-prism-plugins</code> attribute, on any element (first one will be used).</li>
-			<li>Automatically figures out dependencies & aliases</li>
-			<li>CSS is up to you!</li>
-		</ul>
-		<pre class="language-jsx"><code>var start = new Date().getTime();
-setInterval(function() {
-	React.render(
-		&lt;ExampleApplication elapsed={new Date().getTime() - start} />,
-		document.getElementById('container')
-	);
-}, 50);</code></pre>
-	</article>
-
-	<article class="slide" data-video="https://mavo.io/demos/eshop/video.mp4" style="--url: 'https://mavo.io/demos/eshop'" id="media-plugin">
-		<div>
-			<h1>Annotated videos</h1>
-			<ul>
-				<li><code>data-video</code> for URL</li>
-				<li><code>class="annotation"</code> for annotations</li>
-				<li><code>data-time</code> and <code>data-pause</code> on annotations</li>
-			</ul>
-		</div>
-		<span class="annotation top-pointer" style="top: 44%; left: 59.5%; --pointer-left: 4em;" data-time="3000 to 3500" data-pause>Click to dismiss & resume</span>
-		<span class="annotation top-pointer" style="top: 26%; left: 67.1%" data-time="5200 to 5700" data-pause="2000">Auto-resume after 2sec</span>
-	</article>
-
-	<article class="demo slide" id="livedemo">
-		<textarea class="language-html"><p>Live demo!</p></textarea>
-		<textarea class="language-css">
-			p {
-				font-size: 250%;
-				color: #f06;
-			}
-		</textarea>
-	</article>
-
-	<article class="isolated demo slide" id="isolated-livedemo">
-		<textarea class="language-html"><p>Live demo in iframe!</p></textarea>
-		<textarea class="language-css">
-			p {
-				font-size: 250%;
-				color: #f06;
-			}
-		</textarea>
-	</article>
-
-	<article class="slide">
-		<h1>Timer</h1>
-		<ul>
-			<li>Define the talk duration with the attribute <code>data-duration</code> on the <code>body</code>.</li>
-			<li>Timer in the form of a progress bar on the top</li>
-			<li>Style the timer and the end state with the selectors <code>#timer</code> and <code>#timer.end</code> respectively.</li>
-		</ul>
-	</article>
-
-	<article class="slide" data-resolution="1024 768">
-		<h1>Resolution</h1>
-		<ul>
-			<li>Design for a specific resolution, and have slides scale up and down based on the viewport.</li>
-			<li>Define with the attribute <code>data-resolution</code> on the <code>&lt;body></code> for all slides, a grouping element, or individual slides (like this one!).</li>
-			<li>Try resizing the viewport, note how the slide size adapts!</li>
-		</ul>
-	</article>
-
-	<article class="slide">
-		<h1>Presenter View</h1>
-
-		<ul>
-			<li>Use <code>&lt;p class="presenter-notes"></code> for presenter notes. You need at least one of these to have the plugin loaded.</li>
-			<li>Presenter view with <kbd>Ctrl</kbd><kbd>P</kbd> (or <kbd>Shift</kbd><kbd>P</kbd>)</li>
-			<li>Also timer, upcoming slide</li>
-		</ul>
-	</article>
-
-	<article class="slide" id="slidestyle">
-		<style data-slide>
-			.slide {
-				background: rebeccapurple;
-			}
-		</style>
-		<h1>Slide-specific CSS</h1>
-		<p>You can use the <code>data-slide</code> attribute on <code>&lt;style></code> elements in slides, to only style the current slide or inside sections that include multiple slides to style all of them and nothing else.</p>
-		<p>For example, run <code class="language-js">$('#slidestyle style').sheet.cssRules[0].selectorText</code> in the console to see how the original selector gets changed.</p>
-	</article>
 </section>
 
 <section>
 	<header class="slide">
-		<h1>Never forget</h1>
-		<h2>Paper still works...</h2>
+		<h1>But I hate GUIs</h1>
+		<p class="presenter-notes">So have some command line tools!</p>
 	</header>
-</section> -->
+
+	<article class="slide">
+		<header><h1>Command line stuff</h1></header>
+	</article>
+</section>
 
 <footer class="slide" title="The End">
 	<h1>Thank you!</h1>
-	<p>Get it or contribute at <a href="https://github.com/LeaVerou/inspire.js">github.com/LeaVerou/inspire.js</a></p>
+	<p>See this again with more slides with even more resources at <a href="https://maptimeboston.github.io/map-modalities">https://maptimeboston.github.io/map-modalities</a>.</p>
 </footer>
 
 <script src="inspire.js"></script>

@@ -116,3 +116,14 @@ a.source::after {
 .type-simple-output .c1 {
 	background: var(--color2);
 }
+
+.terminology {
+	background: var(--dark2);
+	height: 98vh;
+}
+
+.terminology header {
+	border: 2px currentColor solid;
+	padding: 0 2em;
+	margin: 1em;
+}
