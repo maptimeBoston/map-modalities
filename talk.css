@@ -73,3 +73,46 @@ a.source::after {
 	white-space: nowrap;
 	font-size: 16px;
 }
+
+.type-table table {
+	transform: rotate(45deg);
+}
+
+.type-table th {
+	padding: 0;
+	background: unset;
+	line-height: 1;
+	vertical-align: middle;
+	border: none;
+}
+
+.type-table th, 
+.type-table td {
+	font-size: unset;
+	text-align: center;
+	width: 100px;
+	height: 100px;
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.type-table td {
+	border: 1px grey solid;
+}
+
+.type-table div {
+	transform: rotate(-45deg);
+}
+
+.type-common .a1,
+.type-common .a2,
+.type-common .b1,
+.type-common .b2,
+.type-simple-input .a1,
+.type-simple-input .a2,
+.type-simple-input .a3,
+.type-simple-output .a1,
+.type-simple-output .b1,
+.type-simple-output .c1 {
+	background: var(--color2);
+}

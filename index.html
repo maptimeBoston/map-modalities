@@ -27,17 +27,6 @@
 		<p><strong>precise locations</strong> or <strong>geographical patterns in data</strong> are more important than anything else</p>
 	</article>
 
-	<!-- <article class="slide" title="Inspire.js: Introduction">
-		<h1>Main idea</h1>
-
-		<ul class="delayed-children">
-			<li>An HTML file contains the whole presentation</li>
-			<li>Themes as CSS files</li>
-			<li>Plugins for extra functionality, autoloaded when used</li>
-			<li>Nice JavaScript API for really custom things</li>
-		</ul>
-	</article> -->
-
 	<article id="other-viz" class="slide">
 		<style data-slide>
 			.slide#other-viz {
@@ -62,14 +51,130 @@
 		<a class="source" href="https://gramener.github.io/visual-vocabulary-vega/#/FullList/"></a>
 	</article>
 
-	<!-- <article class="slide">
-		<h1>Syntax</h1>
+	<header id="map-viz" class="slide">
+		<style data-slide>
+			.slide#map-viz {
+				background-image: url('img/map-viz-examples.png');
+				background-size: cover;
+				background-repeat: repeat-y;
+				background-position: 0 0;
+				animation-name: scrollbg;
+				animation-duration: 6s;
+				animation-timing-function: linear;
+				/* animation-iteration-count: infinite; */
+			}
+	
+			.slide#map-viz p,
+			.slide#map-viz h1 {
+				background-color: black;
+				padding: 0.125em 0.25em;
+			}
+		</style>
+		<h1>I <em>actually</em> need a map, yes</h1>
+		<a class="source" href="https://gramener.github.io/visual-vocabulary-vega/#/Spatial/"></a>
+	</header>
 
-		<ul>
-			<li>Slides are defined by adding the <code>slide</code> class to any elements.</li>
-			<li><code>&lt;header class="slide"></code> is a header slide (relevant for the <a href="#overview">Overview</a>)</li>
-		</ul>
+	
+
+	<article class="slide type-table type-simple-input">
+		<header><h1>Easiest to start - we have the data!</h1></header>
+		<table>
+			<thead>
+				<tr>
+					<td style="border: none;"></td>
+					<th scope="col"><div>Map to view</div></th>
+					<th scope="col"><div>Map to interact with</div></th>
+					<th scope="col"><div>Map to contribute to</div></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row"><div>Data we have</div></th>
+					<td class="a1"><div></div></td>
+					<td class="a2"><div></div></td>
+					<td class="a3"><div></div></td>
+				</tr>
+				<tr>
+					<th scope="row"><div>Data we collect</div></th>
+					<td class="b1"><div></div></td>
+					<td class="b2"><div></div></td>
+					<td class="b3"><div></div></td>
+				</tr>
+				<tr>
+					<th scope="row"><div>Data we create</div></th>
+					<td class="c1"><div></div></td>
+					<td class="c2"><div></div></td>
+					<td class="c3"><div></div></td>
+				</tr>
+			</tbody>
+		</table>
 	</article>
+
+	<article class="slide type-table type-simple-output">
+		<header><h1>Easiest to end - we just want a picture.</h1></header>
+		<table>
+			<thead>
+				<tr>
+					<td style="border: none;"></td>
+					<th scope="col"><div>Map to view</div></th>
+					<th scope="col"><div>Map to interact with</div></th>
+					<th scope="col"><div>Map to contribute to</div></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row"><div>Data we have</div></th>
+					<td class="a1"><div></div></td>
+					<td class="a2"><div></div></td>
+					<td class="a3"><div></div></td>
+				</tr>
+				<tr>
+					<th scope="row"><div>Data we collect</div></th>
+					<td class="b1"><div></div></td>
+					<td class="b2"><div></div></td>
+					<td class="b3"><div></div></td>
+				</tr>
+				<tr>
+					<th scope="row"><div>Data we create</div></th>
+					<td class="c1"><div></div></td>
+					<td class="c2"><div></div></td>
+					<td class="c3"><div></div></td>
+				</tr>
+			</tbody>
+		</table>
+	</article>
+
+	<article class="slide type-table type-common">
+		<header><h1>Most maps we want</h1></header>
+		<table>
+			<thead><tr>
+				<td style="border: none;"></td>
+				<th scope="col"><div>Map to view</div></th>
+				<th scope="col"><div>Map to interact with</div></th>
+				<th scope="col"><div>Map to contribute to</div></th>
+			</tr></thead>
+			<tbody>
+				<tr>
+					<th scope="row"><div>Data we have</div></th>
+					<td class="a1"><div></div></td>
+					<td class="a2"><div></div></td>
+					<td class="a3"><div></div></td>
+				</tr><tr>
+					<th scope="row"><div>Data we collect</div></th>
+					<td class="b1"><div></div></td>
+					<td class="b2"><div></div></td>
+					<td class="b3"><div></div></td>
+				</tr><tr>
+					<th scope="row"><div>Data we create</div></th>
+					<td class="c1"><div></div></td>
+					<td class="c2"><div></div></td>
+					<td class="c3"><div></div></td>
+				</tr>
+			</tbody>
+		</table>
+	</article>
+
+	<!-- 
 
 	<article class="slide" id="navigation">
 		<h1>Keyboard Navigation</h1>
@@ -89,26 +194,73 @@
 		<h1>But I'm a programmer!</h1>
 	</header>
 
-	<article class="slide" id="data-insert">
-		<h1>Repeated slides</h1>
-
-		<ul>
-			<li>Use attribute <code>data-insert="#id"</code> on an empty slide to re-insert it later in the slideshow</li>
-			<li>Notice how this slide will also be re-inserted after the next one!</li>
-		</ul>
+	<article data-insert="type-table" class="slide cell a1">
+		<div>Overlay</div>
 	</article>
 
-		<article class="slide">
-			<h1>IDs and titles</h1>
-			<ul>
-				<li>IDs are dynamically assigned by JavaScript, but you can also use your own</li>
-				<li>Slide titles (used in the browser tab when the slide is active, and in the <a href="#overview">Overview</a>) via the <code>title</code> or <code>data-title</code> attributes or headings in the slide.</li>
-				<li>If only an id or only a title is provided, the other is extracted from it.</li>
-			</ul>
-		</article>
+	<article class="slide">
+		<header><h1>Projections</h1></header>
 
-	<!-- <article class="slide" data-insert="#data-insert"></article>
+		<div id="observablehq-0d2cdc9f"></div>
+		<script type="module">
+			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import define from "https://api.observablehq.com/@d3/projection-comparison.js?v=3";
+			const inspect = Inspector.into("#observablehq-0d2cdc9f");
+			(new Runtime).module(define, name => (name === "map") && inspect());
+		</script>
 
+		<a class="source" href="https://observablehq.com/@d3/projection-comparison?collection=@d3/d3-geo"></a>
+	</article>
+
+	<article class="slide">
+		<header>
+			<h1>Choropleth</h1>
+		</header>
+	
+		<div id="observablehq-cc0d7a5a"></div>
+		<script type="module">
+			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import define from "https://api.observablehq.com/@d3/choropleth.js?v=3";
+			const inspect = Inspector.into("#observablehq-cc0d7a5a");
+			(new Runtime).module(define, name => (name === "chart") && inspect());
+		</script>
+	
+		<a class="source" href="https://observablehq.com/@d3/choropleth?collection=@d3/d3-geo"></a>
+	</article>
+
+	<article class="slide">
+		<header>
+			<h1>Bubble</h1>
+		</header>
+	
+		<div id="observablehq-6c9132f6"></div>
+		<script type="module">
+			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import define from "https://api.observablehq.com/@d3/bubble-map.js?v=3";
+			const inspect = Inspector.into("#observablehq-6c9132f6");
+			(new Runtime).module(define, name => (name === "chart") && inspect());
+		</script>
+	
+		<a class="source" href="https://observablehq.com/@d3/bubble-map?collection=@observablehq/maps"></a>
+	</article>
+
+	<article class="slide">
+		<header>
+			<h1>Pop. Change, 2017-2018 (Census)</h1>
+		</header>
+	
+		<div id="observablehq-ba083525"></div>
+		<script type="module">
+			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import define from "https://api.observablehq.com/@mbostock/population-change-2017-2018.js?v=3";
+			const inspect = Inspector.into("#observablehq-ba083525");
+			(new Runtime).module(define, name => (name === "chart") && inspect());
+		</script>
+	
+		<a class="source" href="https://observablehq.com/@mbostock/population-change-2017-2018"></a>
+	</article>
+
+	<!--
 	<article class="slide">
 		<h1>Incremental display</h1>
 
