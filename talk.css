@@ -119,11 +119,22 @@ a.source::after {
 
 .terminology {
 	background: var(--dark2);
-	height: 98vh;
+	/* height: 98vh; */
+}
+
+.terminology pre {
+	background: var(--dark1);
+	padding: 1em;
+	border-radius: 1em;
 }
 
 .terminology header {
 	border: 2px currentColor solid;
 	padding: 0 2em;
-	margin: 1em;
+	/* margin: 1em; */
+}
+
+.bgimg {
+	background-size: cover;
+	background-position: 50% 0;
 }

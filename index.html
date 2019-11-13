@@ -8,6 +8,7 @@
 	<link href="inspire.css" rel="stylesheet" />
 	<link href="theme.css" rel="stylesheet" />
 	<link href="talk.css" rel="stylesheet" />
+	<!-- <link href="plugins/prism/plugin.css" rel="stylesheet" /> -->
 </head>
 <body class="language-markup" data-prism-plugins="normalize-whitespace">
 
@@ -157,42 +158,83 @@
 
 	<article class="slide">
 		<header><h1>Where did the data come from?</h1></header>
-		<ul>
-			<li class="delayed">A web portal!</li>
-		</ul>
+	</article>
+
+	<article id="osm" class="slide bgimg">
+		<style data-slide>
+			.slide#osm {
+				background-image: url('img/osm.png');
+			}
+		</style>
+		<a class="source" href="https://www.openstreetmap.org/"></a>
 	</article>
 
 	<article class="slide terminology">
 		<header><h1>Web Portals</h1></header>
-		<p>hb </p>
-	</article>
-
-	<article class="slide terminology">
-		<header><h1>Metadata</h1></header>
-		<p>hb </p>
-	</article>
-
-	<article class="slide">
-		<header><h1>Where did the data come from?</h1></header>
 		<ul>
-			<li>A web portal!</li>
-			<li class="delayed">Another place</li>
+			<li><a href="https://www.data.gov/">data.gov</a> Open Data from the U.S. Government</li>
+			<li><a href="https://docs.digital.mass.gov/dataset/massgis-data-layers">MassGIS</a> Repository of Massachusetts GIS Data</li>
+			<li><a href="https://www.cambridgema.gov/GIS/gisdatadictionary.aspx">City of Cambridge GIS</a> Repository for City of Cambridge Datasets</li>
+			<li><a href="http://boston.maps.arcgis.com/home/index.html">Boston Maps</a> Data Resource for City of Boston</li>
+			<li><a href="https://opendata.cityofnewyork.us/data/">NYC Open Data</a> - New York City</li>
+			<li><a href="http://dataportals.org/">dataportals.org/</a> collection of open data sites</li>
+			<li><a href="https://www.google.com/publicdata/directory">Google Public Data</a></li>
 		</ul>
 	</article>
+</section>
 
-	<article class="slide terminology">
-		<header><h1>Data dictionary</h1></header>
-		<p>hb </p>
+<section>
+	<header class="slide">
+		<h1>Easy places to upload and show your data</h1>
+		<p class="presenter-notes">Some free, some not.</p>
+	</header>
+	<article id="google" class="slide bgimg">
+		<style data-slide>
+			.slide#google {
+				background-image: url('img/tools-google.png');
+			}
+		</style>
+		<a class="source" href="https://www.google.com/maps/about/mymaps/"></a>
 	</article>
-
-	<article class="slide">
-		<header><h1>Where did the data come from?</h1></header>
-		<ul>
-			<li>A web portal!</li>
-			<li>Another place</li>
-			<li class="delayed">A nice person gave it to us?</li>
-		</ul>
-		<p class="presenter-notes">Same rules apply. Essentially read the documentation.</p>
+	<article id="mapquest" class="slide bgimg">
+		<style data-slide>
+			.slide#mapquest {
+				background-image: url('img/tools-mapquest.png');
+			}
+		</style>
+		<a class="source" href="https://www.mapquest.com/my-maps"></a>
+	</article>
+	<article id="datawrapper" class="slide bgimg">
+		<style data-slide>
+			.slide#datawrapper {
+				background-image: url('img/tools-datawrapper.png');
+			}
+		</style>
+		<a class="source" href="https://www.datawrapper.de/maps/"></a>
+	</article>
+	<article id="batchgeo" class="slide bgimg">
+		<style data-slide>
+			.slide#batchgeo {
+				background-image: url('img/tools-batchgeo.png');
+			}
+		</style>
+		<a class="source" href="https://www.batchgeo.com/"></a>
+	</article>
+	<article id="zeemaps" class="slide bgimg">
+		<style data-slide>
+			.slide#zeemaps {
+				background-image: url('img/tools-zeemaps.png');
+			}
+		</style>
+		<a class="source" href="https://www.zeemaps.com/"></a>
+	</article>
+	<article id="geojsonio" class="slide bgimg">
+		<style data-slide>
+			.slide#geojsonio {
+				background-image: url('img/tools-geojsonio.png');
+			}
+		</style>
+		<a class="source" href="http://geojson.io/"></a>
 	</article>
 </section>
 
@@ -235,6 +277,12 @@
 		<p class="presenter-notes">It's going to be static, I'll probably never update it again, etc. I might even print it! But there are some important things you need to keep in mind.</p>
 	</header>
 
+	<article class="slide terminology">
+		<header><h1>Basemap / Image tiles</h1></header>
+		<p><img src="https://images.squarespace-cdn.com/content/v1/54ff63f0e4b0bafce6932642/1493083821537-QB2WXYDV7ZFPW559G8VQ/ke17ZwdGBToddI8pDm48kBvq8a2_1zGsaX8oJIPdTgQUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2diVeS_FDlPKXiF4F-Ml1a0vpjmJvOnWOTrPkM6wURrRmP7cJNZlDXbgJNE9ef52e8w/image-asset.jpeg?format=1500w" /></p>
+		<a class="source" href="https://www.justinobeirne.com/cartography-comparison"></a>
+	</article>
+
 	<article class="slide">
 		<header><h1>Visual Variables</h1></header>
 		<p><img src="https://www.axismaps.com/media/posts/2018/09/visual_variables.png" /></p>
@@ -264,6 +312,7 @@
 			To Quantize means to group values with discrete increments — like expressing a list of floating point numbers with 1 decimal digit, or rounding time to the closest minute. It is the output range that is discretized, and such a scale allows to transform an initial continuous range into a discrete set of classes.
 
 			Threshold scales will allow us to directly specify the cut values that separate the classes.
+			Various clustering algorithms can provide reasonable thresholds — the most common in geography is known as "Jenks natural breaks"
 		</p>
 	</article>
 
@@ -285,6 +334,16 @@
 		<a class="source" href="http://colorbrewer2.org/#type=qualitative&scheme=Accent&n=5"></a>
 	</article>
 
+	<article class="slide terminology">
+		<header><h1>Vector & raster formats</h1></header>
+		<p>
+			<img src="https://mangomap.com/assets/images/vector-raster.png"/>
+		</p>
+		<a class="source" href="https://mangomap.com/gis-data"></a>
+		<p class='presenter-notes'>
+			Vector data contains one or more coordinates that describe how to draw the point, line or polygon that represents that feature on the face of the earth. Raster data is usually used for satellite imagery, aerial photography, elevation models and topographic maps.
+		</p>
+	</article>
 </section>
 
 <section>
@@ -318,13 +377,54 @@
 		</table>
 	</article>
 	<header class="slide">
-		<h1>There're <em>a lot</em> of libraries for that</h1>
+		<h1>There're <em>a lot</em> of libraries and tools for that</h1>
 		<p class="presenter-notes">Data that we may have to process on a map that we may want our audience to interact with? We're going to get pretty programmy now.</p>
 	</header>
 
+	<article class="slide terminology">
+		<header><h1>Geographic Information System (GIS)</h1></header>
+		<p><img src="https://mangomap.com/assets/images/gis-qgis-expression.PNG" /></p>
+		<ul>
+			<li>Shapefiles (.shp) can store point, line, and area data, along with attribute information</li>
+			<li>GeoTIFFs (.tiff) can store bitmap images with location-specific metadata</li>
+			<li class="delayed">Usually involves bulky desktop software, but you can run queries!</li>
+		</ul>
+		<a class="source" href="https://mangomap.com/gis-data"></a>
+		<p class="presenter-notes">Queries such as 'show me all of the counties in which we made more than $50,000 in sales last year'</p>
+	</article>
+
+	<article id="arcgis" class="slide bgimg">
+		<style data-slide>
+			.slide#arcgis { background-image: url('img/arcgis.png'); }
+		</style>
+		<a class="source" href="https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview"></a>
+		<p class="presenter-notes">
+			ArcGIS - you see a lot of their output.
+		</p>
+	</article>
+
+	<article id="qgis" class="slide bgimg">
+		<style data-slide>
+			.slide#qgis { background-image: url('img/qgis.png'); }
+		</style>
+		<a class="source" href="https://www.qgis.org/en/site/"></a>
+		<p class="presenter-notes">
+			QGIS - free and open source
+		</p>
+	</article>
+
+	<article class="slide terminology">
+		<header><h1>Geocoding</h1></header>
+		<p><img src="https://mangomap.com/assets/images/gis-yourdata-mapdata.png" /></p>
+		<ul>
+			<li>Taking locations and actually turning it into geographically-relevant information ("Statue of Liberty" to (40.7,-74.0))</li>
+			<li>Reverse geocoding is also a thing ((40.7,-74.0) to "Statue of Liberty")</li>
+		</ul>
+		<a class="source" href="https://mangomap.com/gis-data"></a>
+	</article>
+
 	<article class="slide">
 		<header><h1>Census Data!</h1></header>
-	
 		<div id="observablehq-ba083525"></div>
 		<script type="module">
 			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -332,19 +432,81 @@
 			const inspect = Inspector.into("#observablehq-ba083525");
 			(new Runtime).module(define, name => (name === "chart") && inspect());
 		</script>
-	
 		<a class="source" href="https://observablehq.com/@mbostock/population-change-2017-2018"></a>
+	</article>
+
+	<article class="slide terminology">
+		<header><h1>GeoJSON & TopoJSON</h1></header>
+        <pre class="language-json"><code class="language-json">
+{
+  "type": "Feature",
+  "id": 8,
+  "properties": {"name": "Colorado"},
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [[-106.32056285448942,40.998675790862656],[-106.19134826714341,40.99813863734313], /*...*/]
+    ]
+  }
+}
+</code></pre>
+		<a class="source" href="https://observablehq.com/@uwdata/cartographic-visualization"></a>
+		<p class="presenter-notes">
+			GeoJSON models geographic features within a specialized JSON format. A GeoJSON feature can include geometric data – such as longitude, latitude coordinates that make up a country boundary – as well as additional data attributes. The TopoJSON format uses a more compact approach is to encode shared borders only once, representing the topology of geographic regions - resulting in files that are much smaller. 
+		</p>
+	</article>
+
+	<article class="slide">
+		<header><h1>some JavaScript libraries</h1></header>
+		<ul>
+			<li>Leaflet</li>
+			<li>Mapbox</li>
+			<li>CARTO</li>
+			<li>OpenLayers</li>
+			<li>Cesium</li>
+			<li>Deck.gl</li>
+			<li>d3</li>
+		</ul>
+	</article>
+	<article class="slide">
+		<header><h1>some Python libraries</h1></header>
+		<ul>
+			<li>shapely</li>
+			<li>Geopandas</li>
+			<li>Rasterio</li>
+			<li>descartes</li>
+			<li>PySAL</li>
+		</ul>
+	</article>
+
+	<article class="slide">
+		<header><h1>some other services and tools</h1></header>
+		<ul>
+			<li>Geospatial Data Abstraction Library (GDAL) is a translator library for raster and vector geospatial data formats</li>
+			<li>PostGIS is a PostgreSQL spatial extension</li>
+			<li class="delayed">...just go look at the <a href="https://github.com/sacridini/Awesome-Geospatial">Awesome Geospatial</a> list</li>
+		</ul>
 	</article>
 </section>
 
 <section>
 	<header class="slide">
-		<h1>But I hate GUIs</h1>
-		<p class="presenter-notes">So have some command line tools!</p>
+		<h1>More resources</h1>
+		<p class="presenter-notes">Even more tools, command line tools, open source options, tutorials and guides</p>
 	</header>
 
 	<article class="slide">
-		<header><h1>Command line stuff</h1></header>
+		<header><h1>Resource collections</h1></header>
+		<ul>
+			<li><a href="http://maptime.io/lessons-resources/">Lessons and Resources (Maptime HQ)</a></li>
+			<li><a href="http://maptimeboston.github.io/resources">Resources and tutorials (Maptime Boston)</a></li>
+			<li><a href="https://www.axismaps.com/guide/">Cartography guide (Axis Maps)</a></li>
+			<li><a href="https://www.axismaps.com/guide/general/resources/">Map design resources (Axis Maps)</a></li>
+			<li><a href="https://github.com/tolomaps/resources">Cartography / mapping / web design resources (tolomaps@gmail.com)</a></li>
+			<li><a href="https://github.com/nvkelso/geo-how-to">geo how-to: commands, notes for open-source geo workflows  (nvkelso)</a></li>
+			<li><a href="http://duspviz.mit.edu/resources/">Visualization and GIS resources (MIT DUSP)</a></li>
+			<li><a href="https://www.missingmaps.org/learn/">OSM tutorials (Missing Maps)</a></li>
+		</ul>
 	</article>
 </section>
 
@@ -354,6 +516,7 @@
 </footer>
 
 <script src="inspire.js"></script>
+<!-- <script src="plugins/prism/plugin.js"></script> -->
 
 </body>
 </html>
